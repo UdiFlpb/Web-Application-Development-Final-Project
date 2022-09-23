@@ -1,0 +1,33 @@
+*{
+margin: 0;
+padding: 0;
+}
+
+.Continer{
+
+    place-items: center;
+    height: 100%;
+    
+}
+body{
+    background-image: url(background.png);
+    background-blend-mode: multiply;
+}
+
+#navbar{
+    opacity: 0.8;
+}
+.primary-icon{
+    height: 20px;
+    width: 20px;
+}
+
+.primary-icon2{
+    height: 20px;
+    width: 20px;
+    
+}
+.primary-icon3{
+    height: 90px;
+    width: 125px; 
+}
