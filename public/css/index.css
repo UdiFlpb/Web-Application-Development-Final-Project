@@ -31,3 +31,53 @@ body{
     height: 90px;
     width: 125px; 
 }
+.Cards{
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(3,1fr); /*קובע מספר עמודות ושורה*/
+    place-items: center;
+}
+.Card{
+    height: 175px; /*גודל כטיסייה*/
+    width: 160px; /*גודל כטיסייה*/
+   background-size: 130%;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s all ease;
+    background-color: white;
+}
+.Card img{
+    max-height: 90px;
+    max-width: 80px;
+    opacity: 1; /*אחראי את התמונה על הכרטיס אם היה 0 לא היינו רואים*/
+    
+    
+}
+.Card:hover{
+    border:3px solid blue;
+}
+.Card.clicked img, .Card.checked img{
+    opacity: 1;
+}
+
+#timer{
+    height: 30px;
+    width: 20px;
+}
+
+
+
+
+.col-sm-2 {
+    flex: 0 0 auto;
+    width: 40.66666667%;
+}
+
+.Card.shake{
+    background-color: #f15f5f;
+    animation: shake 0.5s;
+ }
+ 
+  
