@@ -38,8 +38,8 @@ body{
     place-items: center;
 }
 .Card{
-    height: 175px; /*גודל כטיסייה*/
-    width: 160px; /*גודל כטיסייה*/
+    height: 230px; /*גודל כטיסייה*/
+    width: 220px; /*גודל כטיסייה*/
    background-size: 130%;
     display: grid;
     place-items: center;
@@ -79,5 +79,13 @@ body{
     background-color: #f15f5f;
     animation: shake 0.5s;
  }
+ .container-fluid1{
+    justify-content: right;
+    background-color: white;
+    opacity: 0.9;
+ }
+ .category{
+    height: 30px;
+    width: 30px;
+ }
  
-  
