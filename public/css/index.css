@@ -47,10 +47,11 @@ body{
     cursor: pointer;
     transition: 0.3s all ease;
     background-color: white;
+    opacity: 0.8;
 }
-.Card img{
-    max-height: 90px;
-    max-width: 80px;
+.Card img{  /*גודל תמונה בתוך הכרטיס*/
+    max-height: 120px;
+    max-width: 150px;
     opacity: 1; /*אחראי את התמונה על הכרטיס אם היה 0 לא היינו רואים*/
     
     
@@ -75,17 +76,21 @@ body{
     width: 40.66666667%;
 }
 
-.Card.shake{
-    background-color: #f15f5f;
-    animation: shake 0.5s;
- }
  .container-fluid1{
     justify-content: right;
     background-color: white;
     opacity: 0.9;
  }
- .category{
-    height: 30px;
-    width: 30px;
+ .category{ /*גודל אייקון של קטגוריות*/
+    height: 50px;
+    width: 50px;
  }
+ .nav-item1{ /*תיאור תמונה בכרטיס*/
+    margin-right: -90px;
+ }
+.btn-outline-info{ /*מסגרת כפתור בכרטיס*/
+    height: 31px; /*גובה*/
+    width: 95px; /*רוחב*/
+}
+
  
