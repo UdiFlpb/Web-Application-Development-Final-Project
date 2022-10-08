@@ -74,7 +74,7 @@ body{
     width: 50px;
 
  }
- .nav-item1{ /*מיקום תיאור תמונה בכרטיס*/
+ .nav-item1{ /*מיקום תיאור (כפתור הוסף לסל) בכרטיס*/
     margin-left: -100px;
  }
  .nav-item{ /*מיקום אייקון קטגוריות*/
@@ -86,7 +86,7 @@ body{
     width: 95px; /*רוחב*/
 }
 
-.text-lowercase{
-    margin-left: auto;
-
+.text-lowercase{ /*מיקום תיאור (כיתוב) בכרטיס*/
+     margin-left: auto;
+     margin-bottom: -23px;
 } 
