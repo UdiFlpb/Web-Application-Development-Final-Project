@@ -75,7 +75,7 @@ body{
 
  }
  .nav-item1{ /*מיקום תיאור תמונה בכרטיס*/
-    margin-right: -90px;
+    margin-left: -100px;
  }
  .nav-item{ /*מיקום אייקון קטגוריות*/
     text-align:center; 
