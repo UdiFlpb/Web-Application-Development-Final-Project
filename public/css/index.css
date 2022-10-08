@@ -84,10 +84,12 @@ body{
  .category{ /*גודל אייקון של קטגוריות*/
     height: 50px;
     width: 50px;
+
  }
  .nav-item1{ /*תיאור תמונה בכרטיס*/
     margin-right: -90px;
  }
+ 
 .btn-outline-info{ /*מסגרת כפתור בכרטיס*/
     height: 31px; /*גובה*/
     width: 95px; /*רוחב*/
