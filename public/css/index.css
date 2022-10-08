@@ -69,9 +69,6 @@ body{
     width: 20px;
 }
 
-
-
-
 .col-sm-2 {
     flex: 0 0 auto;
     width: 40.66666667%;
@@ -87,8 +84,11 @@ body{
     width: 50px;
 
  }
- .nav-item1{ /*תיאור תמונה בכרטיס*/
+ .nav-item1{ /*מיקום תיאור תמונה בכרטיס*/
     margin-right: -90px;
+ }
+ .nav-item{ /*מיקום אייקון קטגוריות*/
+    text-align:center; 
  }
  
 .btn-outline-info{ /*מסגרת כפתור בכרטיס*/
