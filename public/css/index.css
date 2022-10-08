@@ -64,16 +64,6 @@ body{
     opacity: 1;
 }
 
-#timer{
-    height: 30px;
-    width: 20px;
-}
-
-.col-sm-2 {
-    flex: 0 0 auto;
-    width: 40.66666667%;
-}
-
  .container-fluid1{
     justify-content: right;
     background-color: white;
