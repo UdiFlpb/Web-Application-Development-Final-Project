@@ -1,12 +1,18 @@
-//const Item = require('../models/items');
 const ItemService = require('../services/items')
 
-function index (req, res) {
-    console.log(ItemService.getItems())
+function AllItems (req, res) {
     result = ItemService.getItems()
     result.then(r=>{
         res.render("../views/items", { items: r });
     })
 }
 
-module.exports = { index };
+function SearchItems (req, res)
+{
+    result = ItemService.searchItems(req.query.search)
+    result.then(r=>{
+        res.render("../views/items", { items: r });
+    })
+}
+
+module.exports = { AllItems, SearchItems };

@@ -6,12 +6,15 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('public'))
 
-require('dotenv').config()//אני רוצה שהפרוייקט יכיר את כל הסביבת עבודה שלנו
+require('dotenv').config()
 
 //this is the home page
 app.get('/items',require('./routes/items'))
 
-app.listen(3000,function(){
-    console.log('server is running on port 3000')
+//this is the search result page
+app.get('/search',require('./routes/items'))
+
+app.listen(process.env.PORT,function(){
+    console.log('server is running on port: ' + process.env.PORT)
 })
 

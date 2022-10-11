@@ -1,7 +1,10 @@
 const express = require('express');
-const { index } = require('../controllers/items');
+const { AllItems, SearchItems } = require('../controllers/items');
+
 const router = express.Router();
 
-router.get('/items', index);
+router.get('/items', AllItems);
+
+router.get('/search', SearchItems)
 
 module.exports = router;
