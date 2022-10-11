@@ -1,8 +1,20 @@
 const express = require('express');
 
+// const mongoose = require("mongoose");
+// mongoose.connect(process.env.DB_CONNECTION_STRING, { 
+//     useUnifiedTopology: true, 
+//     useNewUrlParser: true 
+// });
+
 const app = express();
 
-app.set('view engine', 'ejs');
+const session = require('express-session'); 
+
+app.use(session({
+    secret: 'foo',    
+    saveUninitialized: false,
+    resave: false
+}))
 
 app.use(express.static('public'))
 
@@ -16,7 +28,10 @@ app.get('/login',function(req,res){//דף התחברות
     res.sendFile(__dirname+'/login.html')
     
 })
-app.listen(3000,function(){
-    console.log('server is running on port 3000')
-})
+app.set('view engine', 'ejs');
+app.use(express.urlencoded({ extended: false }));  
+app.use("/", require("./routes/login"));
+app.listen(process.env.PORT);
+
+
 
