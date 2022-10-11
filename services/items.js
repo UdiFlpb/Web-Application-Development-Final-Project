@@ -1,9 +1,14 @@
 const item = require('../models/items');
 const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://GroupUser:q1w2e3r4@cluster0.6evmk63.mongodb.net/DB')
+require('dotenv').config()
+mongoose.connect(process.env.MongoConnectionString)
 
 function getItems() {
     return item.find()
 }
 
-module.exports = { getItems }
+function searchItems(search) {
+    return item.find({name:  { "$regex": search, "$options": "i" }})
+}
+
+module.exports = { getItems, searchItems }
