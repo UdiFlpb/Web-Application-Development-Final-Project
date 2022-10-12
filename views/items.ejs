@@ -47,7 +47,8 @@
                     </ul>
 
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="SearchBar">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                            id="SearchBar">
                         <button class="btn btn-outline-success" type="submit"><svg xmlns="http://www.w3.org/2000/svg"
                                 width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                 <path
@@ -82,20 +83,10 @@
             </ul>
         </div>
 
+        <!-- this div will hold the itemss search results -->
         <div id=Cards class="Cards">
-                <%for (var i = 0; i < items.length; i++) {%>                
-                    <div class="Card" product=<%=items[i].type%>>                    
-                        <img alt=<%=items[i].type%> src=<%=items[i].img%>>
-                        <p class="text-lowercase"><%=items[i].name%></p>
-                        <p class="text-lowercase"><%=items[i].price%></p>
-                        <ul class="nav justify-content-end">
-                            <li class="nav-item1">
-                                <button type="button" class="btn btn-outline-info">הוסף לסל</button>
-                                <!--כפתור בכרטיס-->
-                            </li>
-                    </div>
-                <%}%>            
         </div>
+
     </div>
 
     <!-- scripts section -->
@@ -104,8 +95,22 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-
     <script src="/js/index.js"></script>
+
+    <!-- products script -->
+    <script type="text/html" id="Search_Template">
+        <div class="Card" product={type}>                    
+            <img alt={type} src={img}>
+            <p class="text-lowercase">{name}</p>
+            <p class="text-lowercase">{price}</p>
+            <ul class="nav justify-content-end">
+                <li class="nav-item1">
+                    <button type="button" class="btn btn-outline-info">הוסף לסל</button>
+                    <!--כפתור בכרטיס-->
+                </li>
+        </div>
+    </script>
+
 </body>
 
 </html>
