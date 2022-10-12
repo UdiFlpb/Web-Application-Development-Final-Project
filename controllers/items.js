@@ -11,7 +11,7 @@ function SearchItems (req, res)
 {
     result = ItemService.searchItems(req.query.search)
     result.then(r=>{
-        res.render("../views/items", { items: r });
+        res.render("../views/search", { items: r });
     })
 }
 

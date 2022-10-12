@@ -1,0 +1,16 @@
+<%for (var i=0; i < items.length; i++) {%>
+    <div class="Card" product=<%=items[i].type%>>
+        <img alt=<%=items[i].type%> src=<%=items[i].img%>>
+            <p class="text-lowercase">
+                <%=items[i].name%>
+            </p>
+            <p class="text-lowercase">
+                <%=items[i].price%>
+            </p>
+            <ul class="nav justify-content-end">
+                <li class="nav-item1">
+                    <button type="button" class="btn btn-outline-info">הוסף לסל</button>
+                    <!--כפתור בכרטיס-->
+                </li>
+    </div>
+    <%}%>

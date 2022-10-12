@@ -51,10 +51,12 @@ function createMarketCatogry(categoryarry){
      justiftContent.appendChild(item1);
      card.appendChild(justiftContent);
      cards.appendChild(card);
-     
- 
     }
- 
  }
 
 
+ $(() => {
+    $('#SearchBar').keyup(function(){
+        $('#Cards').load('search?search=' + $('#SearchBar').val())
+    })
+})
