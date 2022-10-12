@@ -17,7 +17,6 @@ function SearchItems (req, res)
 
 function SearchType (req, res)
 {
-    console.log("entered the controller")
     result = ItemService.SearchType(req.query.type)
     result.then(r=>{
         res.json(r);
