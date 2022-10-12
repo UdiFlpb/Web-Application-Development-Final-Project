@@ -15,4 +15,13 @@ function SearchItems (req, res)
     })
 }
 
-module.exports = { AllItems, SearchItems };
+function SearchType (req, res)
+{
+    console.log("entered the controller")
+    result = ItemService.SearchType(req.query.type)
+    result.then(r=>{
+        res.json(r);
+    })
+}
+
+module.exports = { AllItems, SearchItems, SearchType };
