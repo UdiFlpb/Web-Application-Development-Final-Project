@@ -11,4 +11,8 @@ function searchItems(search) {
     return item.find({name:  { "$regex": search, "$options": "i" }})
 }
 
-module.exports = { getItems, searchItems }
+function SearchType(type) {
+    return item.find({type:  { "$regex": type, "$options": "i" }})
+}
+
+module.exports = { getItems, searchItems, SearchType}
