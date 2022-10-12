@@ -51,10 +51,36 @@ function createMarketCatogry(categoryarry){
      justiftContent.appendChild(item1);
      card.appendChild(justiftContent);
      cards.appendChild(card);
-     
- 
     }
- 
  }
 
+function SearchItems()
+{
+    $.ajax({
+        url: 'search?search=' + $('#SearchBar').val(),
+        context: document.body
+      }).done(function(array) {
+        $('#Cards').html('')
+        for (let index = 0; index < array.length; index++) {
+            let element = array[index];
+            let template = $('#Search_Template').html()
 
+            for(const key in element)
+            {
+                template = template.replaceAll('{' + key + '}', element[key])
+            }
+
+            $('#Cards').append(template)
+        }
+    });
+}
+
+ $(() => {
+    //load all items on initial load
+    SearchItems()
+
+    //Search for new items everytime something is being pressed in the search bar
+    $('#SearchBar').keyup(function(){ 
+        SearchItems()
+    })
+})
