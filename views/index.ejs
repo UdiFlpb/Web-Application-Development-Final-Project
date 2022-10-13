@@ -38,9 +38,16 @@
 
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link disabled">רשימת סניפים</a>
+                        <!-- shops list will be updated from the db on runtime -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                רשימת סניפים
+                            </a>
+                            <ul class="dropdown-menu" id="shopsMenu">
+                                <!-- this will be filled with shops from the db -->
+                            </ul>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link disabled">זמני משלוח</a>
                         </li>
@@ -62,20 +69,20 @@
 
         <div class="container-fluid1">
             <ul class="nav justify-content-end">
-                <li class="nav-item">
-                    <img class="category" src="images/bottle.png"><a id='drink_product' class="nav-link" href="#">משקאות</a>
+                <li class="nav-item" id='drink_product'>
+                    <img class="category" src="images/bottle.png"><a  class="nav-link" href="#">משקאות</a>
                 </li>
 
-                <li class="nav-item">
-                    <img class="category" src="images/meat.png"><a id='meat_product' class="nav-link" href="#">בשר ודגים</a>
+                <li class="nav-item" id='meat_product'>
+                    <img class="category" src="images/meat.png"><a  class="nav-link" href="#">בשר ודגים</a>
                 </li>
 
-                <li class="nav-item">
-                    <img class="category" src="images/dairy-products.png"> <a id="dairy_product" class="nav-link" href="#">מוצרי חלב</a>
+                <li class="nav-item" id="dairy_product">
+                    <img class="category" src="images/dairy-products.png"> <a  class="nav-link" href="#">מוצרי חלב</a>
                 </li>
 
-                <li class="nav-item">
-                    <img class="category" src="images/fruits.png"><a id='fruit_product' class="nav-link" href="#">פירות וירקות</a>
+                <li class="nav-item" id='fruit_product'>
+                    <img class="category" src="images/fruits.png"><a  class="nav-link" href="#">פירות וירקות</a>
                 </li>
             </ul>
         </div>
@@ -107,6 +114,12 @@
                     <!--כפתור בכרטיס-->
                 </li>
         </div>
+    </script>
+
+    <!-- Shops scrtip -->
+
+    <script type="text/html" id="Shops_Template">
+        <li><a class="dropdown-item shops">{name}, {address}</a></li>
     </script>
 
 </body>

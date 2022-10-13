@@ -3,7 +3,7 @@ const ItemService = require('../services/items')
 function AllItems (req, res) {
     result = ItemService.getItems()
     result.then(r=>{
-        res.render("../views/items", { items: r });
+        res.render("../views/index", { items: r });
     })
 }
 
