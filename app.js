@@ -34,6 +34,7 @@ app.get('/type',require('./routes/items'))
 //this is the shops result page
 app.get('/shops',require('./routes/shop'))
 
+// this is login page
 app.use(express.urlencoded({ extended: false }));  
 app.use("/", require("./routes/login"));
 
