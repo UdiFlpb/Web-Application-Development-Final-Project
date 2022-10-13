@@ -22,17 +22,17 @@
         <label for="FullName" class="form-label">אנא הכנס/י שם מלא</label>
         <div class="row">
           <div class="col">
-            <input type="text" class="form-control is-invalid" placeholder="שם פרטי" aria-label="First name">
+            <input name="firstname" type="text" class="form-control is-invalid" placeholder="שם פרטי" aria-label="First name">
           </div>
 
           <div class="col">
-            <input type="text" class="form-control is-invalid" placeholder="שם משפחה" aria-label="Last name">
+            <input name="lastname" type="text" class="form-control is-invalid" placeholder="שם משפחה" aria-label="Last name">
           </div>
 
         </div>
         <!-- UserName -->
         <label for="inputEmail4">שם משתמש</label>
-        <input type="username" class="form-control is-invalid" id="inputEmail4">
+        <input name="Username" type="username" class="form-control is-invalid" >
         <div class="invalid-feedback">
           אנא הכנס שם משתמש
         </div>
@@ -41,33 +41,35 @@
       <!-- password -->
       <div class="col-12">
         <label for="inputPassword" class="form-label">סיסמא</label>
-        <input type="password" class="form-control is-invalid" id="inputPassword4">
+        <input name="password" type="password" class="form-control is-invalid" >
         <div id="emailHelp" class="form-text">סיסמה בת 5 תווים, מספרים בלבד.</div>
         <div class="invalid-feedback">
           אנא הכנס סיסמא
         </div>
       </div>
 
-      <!-- adress -->
+      <!-- phoneNumber -->
       <div class="col-12">
-        <label for="inputAddress" class="form-label">כתובת</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="דוד המלך 50">
+        <label for="inputAddress" class="form-label">מספר טלפון</label>
+        <input name="phonenum" type="text" class="form-control" placeholder="012-3456789">
       </div>
 
       <!-- city -->
       <div class="col-12">
-        <label for="inputCity" class="form-label">עיר</label>
-        <input type="text" class="form-control" id="inputCity">
+        <label for="inputCity" class="form-label" >עיר מגורים</label>
+        <input name="city" type="text" class="form-control" >
       </div>
+
+      <!-- gender -->
       <div class="col-12 form-check">
         <label for="inputSex" class="form-label">אנא בחר מין</label>
       </div>
       <div class="form-check form-check-reverse form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="male" value="option1">
+        <input class="form-check-input" type="radio" name="genderr" id="male" value="option1">
         <label class="form-check-label" for="inlineRadio1">זכר</label>
       </div>
       <div class="form-check form-check-inline form-check-reverse">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="female" value="option2">
+        <input class="form-check-input" type="radio" name="genderr" id="female" value="option2">
         <label class="form-check-label" for="inlineRadio2">נקבה</label>
       </div>
     <div class="d-grid gap-3 col-1 mx-auto">

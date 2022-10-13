@@ -34,12 +34,14 @@ async function login(req, res) {
 }
 
 async function register(req, res) {
-  const { username, password } = req.body
-
-
-  try {
-    await loginService.register(username, password)    
+  const { username, password,firsName,lastName,phoneNumber,gender } = req.body
+  try { 
+    await loginService.register(username, password,firsName, lastName,phoneNumber,gender)    
     req.session.username = username
+    req.session.firsName=firsName
+    req.session.lastName=lastName
+    req.session.phoneNumber=phoneNumber
+    req.session.gender=gender
     res.redirect('/')
   }
   catch (e) { 
