@@ -30,22 +30,18 @@ async function login(req, res) {
     res.redirect('/')
   }
   else
-    res.redirect('/login?error=1')
+    res.redirect('/login?error=2')
 }
 
 async function register(req, res) {
   const { username, password,firsName,lastName,phoneNumber,gender } = req.body
   try { 
     await loginService.register(username, password,firsName, lastName,phoneNumber,gender)    
-    req.session.username = username
-    req.session.firsName=firsName
-    req.session.lastName=lastName
-    req.session.phoneNumber=phoneNumber
-    req.session.gender=gender
+    req.session.username=username
     res.redirect('/')
   }
   catch (e) { 
-    res.redirect('/register?error=1')
+    res.redirect('/register?error=3')
   }    
 }
 

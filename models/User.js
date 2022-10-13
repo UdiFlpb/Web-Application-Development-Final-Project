@@ -9,7 +9,7 @@ const User = new mongoose.Schema({
     type: String,
     required: true,
   },
-  _id:{
+  id:{
     type: String,
     required: true,
   },
