@@ -8,13 +8,85 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
   <body>
-    <form action="/login" method="post">
+    <!-- <form action="/login" method="post">
           <input name="username" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="User Name">
           <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
         </div>
           <input name="password"  type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         <button type="submit" class="btn btn-primary">LogIn</button>
+      </form> -->
+
+      <!-- text-center -->
+      
+      <form class="card row ">
+     <div class="col-4 container ">
+<div class="text-center">
+        <h1 class="modal-title">הרשמה לסופר משתלם</h1></div>
+        <div class="col-md-12">
+      
+            <!-- name -->
+          <label for="FullName" class="form-label">Please enter your name</label>
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+            </div>
+          </div>
+            <!-- email -->
+          <label for="inputEmail4">Email</label>
+         <input type="email" class="form-control" id="inputEmail4">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+            <!-- password -->
+        <div class="col-12">
+          <label for="inputPassword4" class="form-label">Password</label>
+          <input type="password" class="form-control" id="inputPassword4">
+          <div id="emailHelp" class="form-text">Must contain at least 8 characters, numbers only.</div>
+        </div>
+
+        <div class="col-6">
+          <label for="inputAddress" class="form-label">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+
+        <div class="col-3">
+          <label for="inputAddress2" class="form-label">Address 2</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div>
+
+        <div class="col-3">
+          <label for="inputCity" class="form-label">City</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+
+        <div class="col-4">
+          <label for="inputState" class="form-label">State</label>
+          <select id="inputState" class="form-select">
+            <option selected>Choose...</option>
+            <option>...</option>
+          </select>
+        </div>
+
+        <div class="col-2">
+          <label for="inputZip" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="inputZip">
+        </div>
+    
+          <div class="col-12 form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Check me out
+            </label>
+          </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+    </div>
       </form>
+
+
     <a href="/register">Register</a>
   </body>
 </html>
