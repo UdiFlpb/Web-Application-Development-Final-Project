@@ -23,13 +23,16 @@ app.use(session({
 }))
 
 //this is the home page
-app.get('/items',require('./routes/items'))
+app.get('/index',require('./routes/items'))
 
 //this is the search result page
 app.get('/search',require('./routes/items'))
 
 //this is the type result page
 app.get('/type',require('./routes/items'))
+
+//this is the shops result page
+app.get('/shops',require('./routes/shop'))
 
 app.use(express.urlencoded({ extended: false }));  
 app.use("/", require("./routes/login"));

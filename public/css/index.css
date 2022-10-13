@@ -90,3 +90,16 @@ body{
      margin-left: auto;
      margin-bottom: -23px;
 } 
+
+/* תמונות של קטגוריות */
+#drink_product, #meat_product, #dairy_product, #fruit_product{
+    cursor: pointer;
+}
+
+.dropdown-item, .dropdown-menu{
+    z-index: 2147483647 !important;  
+}
+
+.shops{
+    pointer-events: none;
+}

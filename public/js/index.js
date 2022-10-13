@@ -43,9 +43,33 @@ function SearchType(Type)
     });
 }
 
+function GetStores()
+{
+    $.ajax({
+        url: 'shops',
+        context: document.body
+      }).done(function(array) {
+        $('#shopsMenu').html('')
+        for (let index = 0; index < array.length; index++) {
+            let element = array[index];
+            let template = $('#Shops_Template').html()
+
+            for(const key in element)
+            {
+                template = template.replaceAll('{' + key + '}', element[key])
+            }
+
+            $('#shopsMenu').append(template)
+        }
+    });
+}
+
+
+
  $(() => {
     //load all items on initial load
     SearchItems()
+    GetStores()
 
     //Search for new items everytime something is being pressed in the search bar
     $('#SearchBar').keyup(function(){ 
