@@ -1,92 +1,105 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LoginPage</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  </head>
-  <body>
-    <!-- <form action="/login" method="post">
-          <input name="username" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="User Name">
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-          <input name="password"  type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        <button type="submit" class="btn btn-primary">LogIn</button>
-      </form> -->
+<html lang="ar" dir="rtl">
 
-      <!-- text-center -->
-      
-      <form class="card row ">
-     <div class="col-4 container ">
-<div class="text-center">
-        <h1 class="modal-title">הרשמה לסופר משתלם</h1></div>
-        <div class="col-md-12">
-      
-            <!-- name -->
-          <label for="FullName" class="form-label">Please enter your name</label>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LoginPage</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link href="css/login.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <form class="card row" action="/login" method="post">
+    <div class="col-4 container d-grid gap-3">
+      <div class="text-center">
+        <h1 class="modal-title">כניסה לסופר משתלם</h1>
+      </div>
+      <div class="col-md-12">
+        <h7>אנא הכנס/י שם משתמש</h7>
+          <input name="username" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="שם משתמש">
+          <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+      </div>
+      <div class="col-md-12">
+      <h7>אנא הכנס/י סיסמא </h7>
+      <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="סיסמא">
+      <h1>.</h1>
+      <div class="d-grid gap-3 col-3 mx-auto">
+      <button type="submit" class="btn btn-primary">LogIn</button>
+      </div>
+      <div class="text-center ">
+        <div id="emailHelp" class="form-text">עוד לא רשום? הירשם!</div>
+      <a href="/register">Register</a>
+    </div>
+    </div>
+</form>
+
+
+  <!-- text-center -->
+  <!-- <img class=icon1 src="images/logoMarket.png"> -->
+
+
+
+  <!-- name -->
+  <!-- <label for="FullName" class="form-label">אנא הכנס/י שם מלא</label>
           <div class="row">
             <div class="col">
-              <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+              <input type="text" class="form-control" placeholder="שם פרטי" aria-label="First name">
             </div>
             <div class="col">
-              <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+              <input type="text" class="form-control" placeholder="שם משפחה" aria-label="Last name">
             </div>
           </div>
             <!-- email -->
-          <label for="inputEmail4">Email</label>
+  <!-- <label for="inputEmail4">מייל</label>
          <input type="email" class="form-control" id="inputEmail4">
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          <div id="emailHelp" class="form-text">.אל תדאג/י, לא נשתף את המייל שלך</div>
         </div>
-            <!-- password -->
-        <div class="col-12">
-          <label for="inputPassword4" class="form-label">Password</label>
+            password -->
+  <!-- <div class="col-12">
+          <label for="inputPassword4" class="form-label">סיסמא</label>
           <input type="password" class="form-control" id="inputPassword4">
-          <div id="emailHelp" class="form-text">Must contain at least 8 characters, numbers only.</div>
-        </div>
+          <div id="emailHelp" class="form-text">סיסמה בת 5 תווים, מספרים בלבד.</div>
+        </div> -->
 
-        <div class="col-6">
-          <label for="inputAddress" class="form-label">Address</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-        </div>
+  <!-- adress -->
+  <!-- <div class="col-12">
+          <label for="inputAddress" class="form-label">כתובת</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="דוד המלך 50">
+        </div> -->
 
-        <div class="col-3">
-          <label for="inputAddress2" class="form-label">Address 2</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-        </div>
-
-        <div class="col-3">
-          <label for="inputCity" class="form-label">City</label>
+  <!-- city -->
+  <!-- <div class="col-12">
+          <label for="inputCity" class="form-label">עיר</label>
           <input type="text" class="form-control" id="inputCity">
-        </div>
-
-        <div class="col-4">
-          <label for="inputState" class="form-label">State</label>
-          <select id="inputState" class="form-select">
-            <option selected>Choose...</option>
-            <option>...</option>
-          </select>
-        </div>
-
-        <div class="col-2">
-          <label for="inputZip" class="form-label">Zip</label>
-          <input type="text" class="form-control" id="inputZip">
-        </div>
-    
-          <div class="col-12 form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Check me out
-            </label>
+        </div>  
+           <div class="col-12 form-check"> 
+            <label for="inputSex" class="form-label">אנא בחר מין</label>
+            <div class="form-check-reverse">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="male">
+              <label class="form-check-label" for="flexRadioDefault1">
+                זכר
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="female" checked>
+              <label class="form-check-label" for="flexRadioDefault2">
+                נקבה
+              </label>
+            </div>
+          </div>
+           
           </div>
         <div class="col-12">
           <button type="submit" class="btn btn-primary">Sign in</button>
         </div>
     </div>
-      </form>
+      </form> -->
 
+</body>
 
-    <a href="/register">Register</a>
-  </body>
 </html>

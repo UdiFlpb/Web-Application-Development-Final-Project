@@ -7,8 +7,8 @@ function isLoggedIn(req, res, next) {
     res.redirect('/login')
 }
 
-function foo(req, res) {  
-  res.render("foo", {username: req.session.username})
+function index(req, res) {  
+  res.render("index", {username: req.session.username})
 }
 
 function loginForm(req, res) { res.render("login", {}) }
@@ -53,6 +53,6 @@ module.exports = {
   register,
   registerForm,
   logout,
-  foo,
+  index,
   isLoggedIn
 }
