@@ -9,7 +9,7 @@ const User = new mongoose.Schema({
     type: String,
     required: true,
   },
-  id:{
+  username:{
     type: String,
     required: true,
   },
@@ -17,7 +17,7 @@ const User = new mongoose.Schema({
     type: String,
     required: true,
   },
-  phoneNumber:String,
+  phoneNum:String,
   city:String,
   gender:String
   
