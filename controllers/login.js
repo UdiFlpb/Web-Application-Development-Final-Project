@@ -37,10 +37,9 @@ async function register(req, res) {
   const { firstname, lastname, username, password, phonenum, city, gender1, gender2 } = req.body
   try {
     await loginService.register(firstname, lastname, username, password, phonenum, city, gender1, gender2)
-    if (result == "ok") {
       req.session.username = username
       res.redirect('/')
-    }
+    
   }
   catch (e) {
     console.log(e)
