@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 
 const User = new mongoose.Schema({
-  FirstName:{
+  firstname:{
     type: String,
     required: true,
   },
-  LastName:{
+  lastname:{
     type: String,
     required: true,
   },
@@ -17,11 +17,10 @@ const User = new mongoose.Schema({
     type: String,
     required: true,
   },
-  phoneNum:String,
+  phonenum:String,
   city:String,
-  gender:String
-  
-
+  gender1:String,
+  gender2:String,
 });
 
 module.exports = mongoose.model("User", User);
