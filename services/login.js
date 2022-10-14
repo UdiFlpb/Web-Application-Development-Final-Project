@@ -5,8 +5,8 @@ mongoose.connect(process.env.MONGO_URI)
 
 async function login(username, password) {
     const user = await User.findOne({
-         _id: username,
-          password
+         username: username,
+        password:password
          });
     return user != null
 }
