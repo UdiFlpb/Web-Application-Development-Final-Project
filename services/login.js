@@ -17,7 +17,7 @@ async function register(firstname, lastname, username, password, phonenum, city,
         firstname: firstname,
         lastname: lastname,
         username: username,
-        password: password,
+        password:password,
         phonenum: phonenum,
         city: city,
         gender1: gender1,
@@ -27,9 +27,8 @@ async function register(firstname, lastname, username, password, phonenum, city,
     await user.save()
 }
 //checking if the password is ok
-async function checkPwd(password) {
+ function checkPwd(password) {
     if (password.length < 4) {
-        alert("too short")
         return ("too_short");
     } else if (password.length > 6) {
         return ("too_long");
