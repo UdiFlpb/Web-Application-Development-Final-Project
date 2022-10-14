@@ -7,8 +7,8 @@ function isLoggedIn(req, res, next) {
     res.redirect('/login')
 }
 
-function index(req, res) {  
-  res.render("index", {username: req.session.username})
+function index(req, res) {
+  res.render("index", { username: req.session.username })
 }
 
 function loginForm(req, res) { res.render("login", {}) }
@@ -34,17 +34,21 @@ async function login(req, res) {
 }
 
 async function register(req, res) {
-  const {firstname,lastname,username, password,phonenum,city,gender1,gender2} = req.body
-  try { 
-    await loginService.register(firstname,lastname,username, password,phonenum,city,gender1, gender2)    
-    req.session.username=username
-    res.redirect('/')
+  const { firstname, lastname, username, password, phonenum, city, gender1, gender2 } = req.body
+  try {
+    await loginService.register(firstname, lastname, username, password, phonenum, city, gender1, gender2)
+    result = loginService.checkPwd(password)
+    if (result == "ok") {
+      req.session.username = username
+      res.redirect('/')
+    }
   }
-  catch (e) { 
+  catch (e) {
     console.log(e)
     res.redirect('/register?error=3')
-  }    
+  }
 }
+
 
 module.exports = {
   login,
