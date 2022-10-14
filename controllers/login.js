@@ -41,6 +41,7 @@ async function register(req, res) {
     res.redirect('/')
   }
   catch (e) { 
+    console.log(e)
     res.redirect('/register?error=3')
   }    
 }
