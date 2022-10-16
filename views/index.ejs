@@ -20,7 +20,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                העגלה שלי
+                                הסל שלי
                                 <img class=primary-icon src="images/shopping-cart.png"></a>
                             </a>
                             <ul class="dropdown-menu">
@@ -32,11 +32,7 @@
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> הרשימות שלי <img class=primary-icon2
-                                    src="images/clipboard.png"></a>
 
-                        </li>
 
                         <!-- shops list will be updated from the db on runtime -->
                         <li class="nav-item dropdown">
@@ -56,11 +52,7 @@
                     <div class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
                             id="SearchBar">
-                        <div class="btn btn-outline-success" type="submit"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                            </svg></div>
+                        
                         </div>
                     <img class=primary-icon3 src="images/logoMarket.png">
                 </div>
@@ -99,7 +91,7 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <script src="/js/index.js"></script>
+    <!-- <script src="/js/index.js"></script> -->
     <!-- <script src="/js/login.js"></script> -->
 
     <!-- products script -->
@@ -110,11 +102,13 @@
             <p class="text-lowercase">{price}</p>
             <ul class="nav justify-content-end">
                 <li class="nav-item1">
-                    <button type="button" class="btn btn-outline-info">הוסף לסל</button>
+                    <button type="button" class="btn btn-outline-info" onclick=" GetCartBtn()">הוסף לסל</button>
                     <!--כפתור בכרטיס-->
                 </li>
         </div>
     </script>
+    
+    <script src="/js/index.js"></script>
 
     <!-- Shops scrtip -->
 
