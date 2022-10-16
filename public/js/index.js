@@ -63,14 +63,31 @@ function GetStores()
         }
     });
 }
-
+//arry
+proudactasOnCart=[]
+ //btn addtocart
+function GetCartBtn(){
+    console.log("hello");
+    const cards=document.querySelectorAll('.Cards .Card');
+console.log(cards);
+    cards.forEach((card)=> {
+        // console.log(card);
+        card.addEventListener('click',function()
+        {
+          proudactasOnCart.append
+          console.log(card);
+        }
+        )
+    }
+    )
+}
 
 
  $(() => {
     //load all items on initial load
     SearchItems()
     GetStores()
-
+    GetCartBtn()
     //Search for new items everytime something is being pressed in the search bar
     $('#SearchBar').keyup(function(){ 
         SearchItems()

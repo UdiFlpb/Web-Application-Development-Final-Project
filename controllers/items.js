@@ -1,7 +1,7 @@
 const ItemService = require('../services/items')
 
 function AllItems (req, res) {
-    result = ItemService.getItems()
+    result = ItemService.getItems() //get all the items from the DB
     result.then(r=>{
         res.render("../views/index", { items: r });
     })
