@@ -7,6 +7,13 @@ function AllItems (req, res) {
     })
 }
 
+function GetCart (req, res) {
+    result.then(r=>{
+        res.render("../views/cart");
+    })
+}
+
+
 function SearchItems (req, res)
 {
     result = ItemService.searchItems(req.query.search)
@@ -23,4 +30,4 @@ function SearchType (req, res)
     })
 }
 
-module.exports = { AllItems, SearchItems, SearchType };
+module.exports = { AllItems, SearchItems, SearchType, GetCart };
