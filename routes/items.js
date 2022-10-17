@@ -1,5 +1,5 @@
 const express = require('express');
-const { AllItems, SearchItems, SearchType, GetCart} = require('../controllers/items');
+const { AllItems, SearchItems, SearchType, GetCart, EditItem, DeleteItem} = require('../controllers/items');
 
 const router = express.Router();
 
@@ -12,5 +12,9 @@ router.get('/getcart', function(req, res, next) {
 router.get('/search', SearchItems);
 
 router.get('/type', SearchType);
+
+router.post('/edititem', EditItem)
+
+router.post('/deleteitem', DeleteItem)
 
 module.exports = router;

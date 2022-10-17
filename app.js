@@ -22,8 +22,16 @@ app.use(session({
     resave: false
 }))
 
+app.use(express.urlencoded({ extended: false })); 
+
 //this is the home page
 app.get('/index',require('./routes/items'))
+
+//this is updating a product post method
+app.post('/edititem',require('./routes/items'))
+
+//this is deleting a product post method
+app.post('/deleteitem',require('./routes/items'))
 
 //this is the search result page
 app.get('/search',require('./routes/items'))
@@ -37,8 +45,7 @@ app.get('/getcart', require('./routes/items'))
 //this is the shops result page
 app.get('/shops',require('./routes/shop'))
 
-// this is login page
-app.use(express.urlencoded({ extended: false }));  
+// this is login page 
 app.use("/", require("./routes/login"));
 
 app.listen(process.env.PORT,function(){
