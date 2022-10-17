@@ -8,7 +8,7 @@ app.use(express.static('public'))
 
 require('dotenv').config()
 
-// add db conection
+// connect to the db
 const mongoose = require("mongoose");
 mongoose.connect(process.env.MONGO_URI, { 
     useUnifiedTopology: true, 
@@ -33,7 +33,6 @@ app.get('/type',require('./routes/items'))
 
 //this is the cart result page
 app.get('/getcart', require('./routes/items'))
-
 
 //this is the shops result page
 app.get('/shops',require('./routes/shop'))
