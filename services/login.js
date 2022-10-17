@@ -11,7 +11,7 @@ async function login(username, password) {
     return user != null
 }
 
-async function register(firstname, lastname, username, password, phonenum, city, gender1, gender2) {
+async function register(firstname, lastname, username, password, phonenum, city, admin) {
 
     const user = new User({
         firstname: firstname,
@@ -20,8 +20,7 @@ async function register(firstname, lastname, username, password, phonenum, city,
         password:password,
         phonenum: phonenum,
         city: city,
-        gender1: gender1,
-        gender2: gender2
+        admin: admin
     });
 
     await user.save()
@@ -65,4 +64,21 @@ function IsNameValied(firstname) {
     }
 }
 
-module.exports = { login, register }
+//this function receives a username and checks in the db if he is an admin
+async function IsAdmin(username)
+{
+    const user = await User.findOne({
+        username: username,
+    });
+
+    //check if user is not null
+    if(user)
+    {
+        return user.admin
+    }
+
+    //if user is null return false automatically
+    return false
+}
+
+module.exports = { login, register, IsAdmin }

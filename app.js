@@ -8,7 +8,7 @@ app.use(express.static('public'))
 
 require('dotenv').config()
 
-// add db conection
+// connect to the db
 const mongoose = require("mongoose");
 mongoose.connect(process.env.MONGO_URI, { 
     useUnifiedTopology: true, 
@@ -22,8 +22,16 @@ app.use(session({
     resave: false
 }))
 
+app.use(express.urlencoded({ extended: false })); 
+
 //this is the home page
 app.get('/index',require('./routes/items'))
+
+//this is updating a product post method
+app.post('/edititem',require('./routes/items'))
+
+//this is deleting a product post method
+app.post('/deleteitem',require('./routes/items'))
 
 //this is the search result page
 app.get('/search',require('./routes/items'))
@@ -34,12 +42,16 @@ app.get('/type',require('./routes/items'))
 //this is the cart result page
 app.get('/getcart', require('./routes/items'))
 
-
 //this is the shops result page
 app.get('/shops',require('./routes/shop'))
 
-// this is login page
-app.use(express.urlencoded({ extended: false }));  
+//this is updating a shop post method
+app.post('/editshop',require('./routes/shop'))
+
+//this is deleting a shop post method
+app.post('/deleteshop',require('./routes/shop'))
+
+// this is login page 
 app.use("/", require("./routes/login"));
 
 app.listen(process.env.PORT,function(){

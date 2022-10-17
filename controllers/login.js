@@ -7,8 +7,16 @@ function isLoggedIn(req, res, next) {
     res.redirect('/login')
 }
 
-function index(req, res) {
-  res.render("index", { username: req.session.username })
+async function index(req, res) {
+  //check if the username is an admin first
+  if (await loginService.IsAdmin(req.session.username)) {
+      res.render("../views/admin.ejs", { username: req.session.username })
+  }
+
+  //redirect to normal page
+  else {
+    res.render("../views/index.ejs", { username: req.session.username })
+  }
 }
 
 function loginForm(req, res) { res.render("login", {}) }
@@ -34,19 +42,18 @@ async function login(req, res) {
 }
 
 async function register(req, res) {
-  const { firstname, lastname, username, password, phonenum, city, gender1, gender2 } = req.body
+  const { firstname, lastname, username, password, phonenum, city } = req.body
   try {
-    await loginService.register(firstname, lastname, username, password, phonenum, city, gender1, gender2)
-      req.session.username = username
-      res.redirect('/')
-    
+    await loginService.register(firstname, lastname, username, password, phonenum, city, false)
+    req.session.username = username
+    res.redirect('/')
+
   }
   catch (e) {
     console.log(e)
     res.redirect('/register?error=3')
   }
 }
-
 
 module.exports = {
   login,
