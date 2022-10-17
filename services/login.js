@@ -11,7 +11,7 @@ async function login(username, password) {
     return user != null
 }
 
-async function register(firstname, lastname, username, password, phonenum, city, gender1, gender2) {
+async function register(firstname, lastname, username, password, phonenum, city, ) {
 
     const user = new User({
         firstname: firstname,
@@ -20,8 +20,6 @@ async function register(firstname, lastname, username, password, phonenum, city,
         password:password,
         phonenum: phonenum,
         city: city,
-        gender1: gender1,
-        gender2: gender2
     });
 
     await user.save()
