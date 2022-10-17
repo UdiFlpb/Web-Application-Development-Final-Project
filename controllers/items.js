@@ -30,4 +30,19 @@ function SearchType (req, res)
     })
 }
 
-module.exports = { AllItems, SearchItems, SearchType, GetCart };
+
+function EditItem(req,res)
+{
+    const { img, name, price, originalname } = req.body
+    ItemService.EditItem(img, name, price, originalname)
+    res.redirect('/')
+}
+
+function DeleteItem(req,res)
+{
+    const { name } = req.body
+    ItemService.DeleteItem(name)
+    res.redirect('/')
+}
+
+module.exports = { AllItems, SearchItems, SearchType, GetCart, EditItem, DeleteItem };

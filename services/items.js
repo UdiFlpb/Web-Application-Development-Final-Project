@@ -15,4 +15,17 @@ function SearchType(type) {
     return item.find({type:  { "$regex": type, "$options": "i" }})
 }
 
-module.exports = { getItems, searchItems, SearchType}
+async function EditItem(img, name, price, originalname)
+{
+    const filter = {name: originalname}
+    const update = {img: img, name: name, price: price}
+    await item.findOneAndUpdate(filter, update);
+}
+
+async function DeleteItem(name)
+{
+    const filter = {name: name}
+    await item.deleteOne(filter)
+}
+
+module.exports = { getItems, searchItems, SearchType, EditItem, DeleteItem}
