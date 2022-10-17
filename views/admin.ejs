@@ -95,19 +95,43 @@
                     </li>
             </form>                 
     </script>
-
+    
     <!-- Shops scrtip -->
     <script type="text/html" id="Shops_Template">
         <div class="Card" id="shop{ID}">                    
-            <p class="text-lowercase">{name}</p>
-            <p class="text-lowercase">{address}</p>
+            <p class="text-lowercase name">{name}</p>
+            <p class="text-lowercase address">{address}</p>
             <ul class="nav justify-content-end">
                 <li class="nav-item1">
-                    <button type="button" class="btn btn-outline-info" onclick=" GetCartBtn()">ערוך</button>
-                    <!--כפתור בכרטיס-->
+                    <button type="button" class="btn btn-outline-info" onclick=editshop({ID})>ערוך</button>
                 </li>
+                <li class="nav-item2 ">
+                    <form action="/deleteshop" method="post">
+                        <button type="submit" class="btn btn-outline-info">מחק</button>
+                        <input name="name" class="form-control fw-lighter">
+                    </form>
+                </li>
+            </ul>
         </div>
     </script>
+
+    <!-- shops edit script -->
+    <script type="text/html" id="edit_shop_template">
+        <form action="/editshop" method="post">
+            <input name="name" id="inputname" class="form-control fw-lighter">
+            <input name="address" id="inputaddress" class="form-control fw-lighter">
+            <input name="originalname" id ="originalname" class="form-control">
+            <ul class="nav justify-content-end">
+                <li class="nav-item1">
+                    <button type="submit" class="btn btn-outline-info">שמור</button>
+                    <!--כפתור בכרטיס-->
+                </li>
+                <li class="nav-item2">
+                    <button type="button" class="btn btn-outline-info" onclick=CancelShopEdit()>בטל</button>
+                    <!--כפתור בכרטיס-->
+                </li>
+        </form>                 
+</script>
 
 </body>
 

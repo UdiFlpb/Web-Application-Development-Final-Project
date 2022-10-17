@@ -38,6 +38,9 @@ function GetStores() {
             template = template.replaceAll('{ID}', index)
 
             $('#ShopCards').append(template)
+
+            $('#shop' + index).find('.form-control').val(element["name"])
+            $('#shop' + index).find('.form-control').hide()
         }
     });
 }
@@ -60,6 +63,24 @@ function edititem(ID) {
 function CancelProductEdit()
 {
     SearchItems()
+}
+
+function CancelShopEdit()
+{
+    GetStores()
+}
+
+function editshop(ID) {
+    let originalNAME = $('#shop' + ID).children('.name').html()
+    let originalADDRESS = $('#shop' + ID).children('.address').html()
+    $('#shop' + ID).html('')
+    let template = $('#edit_shop_template').html()
+    template = template.replaceAll('{ID}', ID)
+    $('#shop' + ID).append(template)
+    $('#inputname').val(originalNAME)
+    $('#inputaddress').val(originalADDRESS)
+    $('#originalname').val(originalNAME)
+    $('#originalname').hide()
 }
 
 

@@ -45,6 +45,12 @@ app.get('/getcart', require('./routes/items'))
 //this is the shops result page
 app.get('/shops',require('./routes/shop'))
 
+//this is updating a shop post method
+app.post('/editshop',require('./routes/shop'))
+
+//this is deleting a shop post method
+app.post('/deleteshop',require('./routes/shop'))
+
 // this is login page 
 app.use("/", require("./routes/login"));
 
