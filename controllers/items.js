@@ -1,11 +1,18 @@
 const ItemService = require('../services/items')
 
 function AllItems (req, res) {
-    result = ItemService.getItems()
+    result = ItemService.getItems() //get all the items from the DB
     result.then(r=>{
         res.render("../views/index", { items: r });
     })
 }
+
+function GetCart (req, res) {
+    result.then(r=>{
+        res.render("../views/cart");
+    })
+}
+
 
 function SearchItems (req, res)
 {
@@ -23,4 +30,4 @@ function SearchType (req, res)
     })
 }
 
-module.exports = { AllItems, SearchItems, SearchType };
+module.exports = { AllItems, SearchItems, SearchType, GetCart };

@@ -31,6 +31,10 @@ app.get('/search',require('./routes/items'))
 //this is the type result page
 app.get('/type',require('./routes/items'))
 
+//this is the cart result page
+app.get('/getcart', require('./routes/items'))
+
+
 //this is the shops result page
 app.get('/shops',require('./routes/shop'))
 

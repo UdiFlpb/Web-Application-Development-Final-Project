@@ -63,14 +63,37 @@ function GetStores()
         }
     });
 }
-
+//arry
+proudactasOnCart=[]
+ //btn addtocart
+//  $(document).click(function(event) {
+//     console.log($(event.target));
+// });
+function GetCartBtn(){
+    let pushAction=0; //דגל למניעת חזרה של איברים במערך ופעולה שאנחנו רוצים שתהיה פעם אחת
+    const cards=document.querySelectorAll('.Cards .Card');
+    cards.forEach((card)=> {
+        // console.log(card);
+        card.addEventListener('click',function()
+        {
+            if (pushAction == 0){ // בדיקה האם הדגל שלנו שווה לערך שהאתחלנו אותו בפעם הראשונה
+                proudactasOnCart.push(card);
+                pushAction = 1; // שנינו את הערך כדי לוודא שהפעולה לא תתבצע עוד פעם
+            }
+          console.log(proudactasOnCart);
+          return;
+        }
+        )
+    }
+    )
+}
 
 
  $(() => {
     //load all items on initial load
     SearchItems()
     GetStores()
-
+    GetCartBtn()
     //Search for new items everytime something is being pressed in the search bar
     $('#SearchBar').keyup(function(){ 
         SearchItems()
