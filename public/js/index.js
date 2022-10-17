@@ -66,16 +66,22 @@ function GetStores()
 //arry
 proudactasOnCart=[]
  //btn addtocart
+//  $(document).click(function(event) {
+//     console.log($(event.target));
+// });
 function GetCartBtn(){
-    console.log("hello");
+    let pushAction=0; //דגל למניעת חזרה של איברים במערך ופעולה שאנחנו רוצים שתהיה פעם אחת
     const cards=document.querySelectorAll('.Cards .Card');
-console.log(cards);
     cards.forEach((card)=> {
         // console.log(card);
         card.addEventListener('click',function()
         {
-          proudactasOnCart.append
-          console.log(card);
+            if (pushAction == 0){ // בדיקה האם הדגל שלנו שווה לערך שהאתחלנו אותו בפעם הראשונה
+                proudactasOnCart.push(card);
+                pushAction = 1; // שנינו את הערך כדי לוודא שהפעולה לא תתבצע עוד פעם
+            }
+          console.log(proudactasOnCart);
+          return;
         }
         )
     }
