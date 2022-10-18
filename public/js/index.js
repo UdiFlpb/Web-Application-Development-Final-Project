@@ -14,6 +14,8 @@ function SearchItems()
                 template = template.replaceAll('{' + key + '}', element[key])
             }
 
+            template = template.replaceAll('{ID}', index)
+
             $('#Cards').append(template)
         }
     });
@@ -37,6 +39,8 @@ function SearchType(Type)
             {
                 template = template.replaceAll('{' + key + '}', element[key])
             }
+
+            template = template.replaceAll('{ID}', index)
 
             $('#Cards').append(template)
         }
@@ -83,6 +87,13 @@ function GetCartBtn(){
         )
     }
     )
+}
+
+function AddToCart(ID)
+{
+    let name = $('#item' + ID).children('.name').html()
+    alert(name)
+    
 }
 
 

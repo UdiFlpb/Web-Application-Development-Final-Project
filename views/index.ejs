@@ -84,13 +84,13 @@
 
     <!-- products script -->
     <script type="text/html" id="Search_Template">
-        <div class="Card" product={type}>                    
+        <div class="Card" id="item{ID}" product={type}>                    
             <img alt={type} src={img}>
-            <p class="text-lowercase">{name}</p>
+            <p class="text-lowercase name">{name}</p>
             <p class="text-lowercase">{price}</p>
             <ul class="nav justify-content-end">
                 <li class="nav-item1">
-                    <button id=addBtn type="button" class="btn btn-outline-info" onclick=" GetCartBtn()">הוסף לסל</button>
+                    <button id=addBtn type="button" class="btn btn-outline-info" onclick=AddToCart({ID})>הוסף לסל</button>
                     <!--כפתור בכרטיס-->
                 </li>
         </div>
