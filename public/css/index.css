@@ -106,3 +106,13 @@ body{
 .nameUserSize{
     height: 1rem;
 }
+
+#deleteBtn{
+    height: 31px;
+    width: 62px; 
+}
+
+#editBtn{
+    height: 31px;
+    width: 62px;  
+}

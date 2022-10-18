@@ -63,13 +63,13 @@
             <p class="text-lowercase price">{price}</p>
             <ul class="nav justify-content-end">
                 <li class="nav-item1">
-                    <button type="button" class="btn btn-outline-info" onclick=edititem({ID})>ערוך</button>
+                    <button id=editBtn type="button" class="btn btn-outline-info" onclick=edititem({ID})>ערוך</button>
                     <!--כפתור בכרטיס-->
                 </li>
                 <li class="nav-item2 ">
                     <form action="/deleteitem" method="post">
-                        <button type="submit" class="btn btn-outline-info">מחק</button>
-                        <input name="name" class="form-control fw-lighter">
+                        <button id=deleteBtn type="submit" class="btn btn-outline-info">מחק</button>
+                        <input name="name"  class="form-control fw-lighter">
                     </form>
                     <!--כפתור בכרטיס-->
                 </li>
