@@ -1,9 +1,10 @@
 const ItemService = require('../services/items')
 
-function AllItems (req, res) {
+function AllItems (req, res) { //the node(express) gets us the res and req and the controller will handlle it
     result = ItemService.getItems() //get all the items from the DB
     result.then(r=>{
-        res.render("../views/index", { items: r });
+        res.render("../views/index", { items: r }); //render-take ejs file and objects from the model and connect between them,items=key ,r of the key
+
     })
 }
 

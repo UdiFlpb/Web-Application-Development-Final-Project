@@ -63,12 +63,9 @@ function GetStores()
         }
     });
 }
-//arry
+//arry of all the products
 proudactasOnCart=[]
- //btn addtocart
-//  $(document).click(function(event) {
-//     console.log($(event.target));
-// });
+
 function GetCartBtn(){
     let pushAction=0; //דגל למניעת חזרה של איברים במערך ופעולה שאנחנו רוצים שתהיה פעם אחת
     const cards=document.querySelectorAll('.Cards .Card');
@@ -76,9 +73,9 @@ function GetCartBtn(){
         // console.log(card);
         card.addEventListener('click',function()
         {
-            if (pushAction == 0){ // בדיקה האם הדגל שלנו שווה לערך שהאתחלנו אותו בפעם הראשונה
+            if (pushAction == 0){ // check if the flag value is the same as value in the initalization stage
                 proudactasOnCart.push(card);
-                pushAction = 1; // שנינו את הערך כדי לוודא שהפעולה לא תתבצע עוד פעם
+                pushAction = 1; // flag=1 to make sure that the action will not be executed again
             }
           console.log(proudactasOnCart);
           return;
