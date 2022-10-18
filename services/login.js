@@ -28,17 +28,17 @@ async function register(firstname, lastname, username, password, phonenum, city,
 //checking if the password is ok
  function checkPwd(password) {
     if (password.length < 4) {
-        return ("too_short");
+        return false;
     } else if (password.length > 6) {
-        return ("too_long");
+        return false;
     } else if (str.search(/\d/) == -1) {
-        return ("no_num");
+        return false;
     } else if (str.search(/[a-zA-Z]/) != -1) {
-        return ("dont enter letter");
+        return false;
     } else if (str.search(/[^a-zA-Z0-9\!\@\#\$\%\^\&\*\(\)\_\+]/) != -1) {
-        return ("bad_char");
+        return false;
     }
-    return ("ok");
+    return true;
 }
 
 //valedation for username
@@ -52,15 +52,16 @@ function isUserNameValid(username) {
     */
     const res = /^[a-z0-9_\.]+$/.exec(username);
     const valid = !!res;
-    return valid;
+    return true;
 }
+// this fanction check if the name is valied
 function IsNameValied(firstname) {
     var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
     var name = (firstname.value);
     if (!regName.test(name)) {
-        alert('Invalid name given.');
+        return false;
     } else {
-        alert('Valid name given.');
+        return true;
     }
 }
 
@@ -81,4 +82,4 @@ async function IsAdmin(username)
     return false
 }
 
-module.exports = { login, register, IsAdmin }
+module.exports = { login, register, IsAdmin,checkPwd ,isUserNameValid}

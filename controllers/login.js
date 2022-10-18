@@ -19,6 +19,26 @@ async function index(req, res) {
   }
 }
 
+//register new users
+async function register(req, res) {
+  const { firstname, lastname, username, password, phonenum, city } = req.body
+  try {
+    if (loginService.checkPwd(req.body.password) && loginService.isUserNameValid(req.body.username)){
+    await loginService.register(firstname, lastname, username, password, phonenum, city, false)
+    req.session.username = username
+    res.redirect('/')
+    }
+    else {
+      res.console("password not ok")
+    }
+
+  }
+  catch (e) {
+    console.log(e)
+    res.redirect('/register?error=3')
+  }
+}
+
 function loginForm(req, res) { res.render("login", {}) }
 
 function registerForm(req, res) { res.render("register", {}) }
