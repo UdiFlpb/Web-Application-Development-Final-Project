@@ -8,11 +8,6 @@ function AllItems (req, res) { //the node(express) gets us the res and req and t
     })
 }
 
-function GetCart (req, res) {
-    result.then(r=>{
-        res.render("../views/cart");
-    })
-}
 
 
 function SearchItems (req, res)
