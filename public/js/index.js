@@ -82,7 +82,7 @@ function AddToCart(ID)
     //load all items on initial load
     SearchItems()
     GetStores()
-    GetCartBtn()
+    
     //Search for new items everytime something is being pressed in the search bar
     $('#SearchBar').keyup(function(){ 
         SearchItems()
