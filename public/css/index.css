@@ -116,6 +116,11 @@ body{
     height: 31px;
     width: 62px;  
 }
+
+.btn-outline-info {
+    height: 31px;
+    width: 62px;
+}
 .dropdown-menu[data-bs-popper]{
     top: 50%;
 }
