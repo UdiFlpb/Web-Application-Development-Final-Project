@@ -8,8 +8,6 @@ function AllItems (req, res) { //the node(express) gets us the res and req and t
     })
 }
 
-
-
 function SearchItems (req, res)
 {
     result = ItemService.searchItems(req.query.search)
@@ -26,7 +24,6 @@ function SearchType (req, res)
     })
 }
 
-
 function EditItem(req,res)
 {
     const { img, name, price, originalname } = req.body
@@ -41,4 +38,4 @@ function DeleteItem(req,res)
     res.redirect('/')
 }
 
-module.exports = { AllItems, SearchItems, SearchType, GetCart, EditItem, DeleteItem };
+module.exports = { AllItems, SearchItems, SearchType, EditItem, DeleteItem };
