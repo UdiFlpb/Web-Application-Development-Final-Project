@@ -103,11 +103,11 @@
             <p class="text-lowercase address">{address}</p>
             <ul class="nav justify-content-end">
                 <li class="nav-item1">
-                    <button type="button" class="btn btn-outline-info" onclick=editshop({ID})>ערוך</button>
+                    <button type="button"  id="editBtn" class="btn btn-outline-info" onclick=editshop({ID})>ערוך</button>
                 </li>
                 <li class="nav-item2 ">
                     <form action="/deleteshop" method="post">
-                        <button type="submit" class="btn btn-outline-info">מחק</button>
+                        <button type="submit" id="deleteBtn" class="btn btn-outline-info">מחק</button>
                         <input name="name" class="form-control fw-lighter">
                     </form>
                 </li>
