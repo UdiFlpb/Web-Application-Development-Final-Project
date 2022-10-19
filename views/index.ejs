@@ -21,10 +21,20 @@
                             <p id="nameUserSize"><small> <%=username%> </small></p>
                         </li>
                         
-                        <a href="/getcart" controls preloed="auto">
-                            הסל שלי
-                            <img class=primary-icon src="images/shopping-cart.png"></a>
-                        </a>                    
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              הסל שלי
+                              <img class=primary-icon src="images/shopping-cart.png"></a>
+                            </a>
+                            <ul class="dropdown-menu"  id="cartBtn">
+                                
+                            </ul>
+                          </li>                   
+                        
+                          
+
+
+
 
                         <!-- shops list will be updated from the db on runtime -->
                         <li class="nav-item dropdown">
@@ -84,13 +94,13 @@
 
     <!-- products script -->
     <script type="text/html" id="Search_Template">
-        <div class="Card" product={type}>                    
+        <div class="Card" id="item{ID}" product={type}>                    
             <img alt={type} src={img}>
-            <p class="text-lowercase">{name}</p>
+            <p class="text-lowercase name">{name}</p>
             <p class="text-lowercase">{price}</p>
             <ul class="nav justify-content-end">
                 <li class="nav-item1">
-                    <button type="button" class="btn btn-outline-info" onclick=" GetCartBtn()">הוסף לסל</button>
+                    <button id=addBtn type="button" class="btn btn-outline-info" onclick=AddToCart({ID})>הוסף לסל</button>
                     <!--כפתור בכרטיס-->
                 </li>
         </div>
@@ -99,6 +109,10 @@
     <!-- Shops scrtip -->
     <script type="text/html" id="Shops_Template">
         <li><a class="dropdown-item shops">{name}, {address}</a></li>
+    </script>
+
+    <script type="text/html" id="Cart_Template">
+        <li><a class="dropdown-item">{name}</a></li>
     </script>
 
 </body>

@@ -15,7 +15,7 @@ body{
 }
 
 #navbar{
-    opacity: 0.8;
+    opacity: 1;
 }
 .primary-icon{
     height: 20px;
@@ -106,3 +106,23 @@ body{
 .nameUserSize{
     height: 1rem;
 }
+
+#deleteBtn{
+    height: 31px;
+    width: 62px; 
+}
+
+#editBtn{
+    height: 31px;
+    width: 62px;  
+}
+
+
+
+.dropdown-menu[data-bs-popper]{
+    top: 50%;
+}
+.dropdown-menu{
+    text-align: right;
+}
+

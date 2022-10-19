@@ -14,6 +14,8 @@ function SearchItems()
                 template = template.replaceAll('{' + key + '}', element[key])
             }
 
+            template = template.replaceAll('{ID}', index)
+
             $('#Cards').append(template)
         }
     });
@@ -37,6 +39,8 @@ function SearchType(Type)
             {
                 template = template.replaceAll('{' + key + '}', element[key])
             }
+
+            template = template.replaceAll('{ID}', index)
 
             $('#Cards').append(template)
         }
@@ -63,29 +67,15 @@ function GetStores()
         }
     });
 }
-//arry
-proudactasOnCart=[]
- //btn addtocart
-//  $(document).click(function(event) {
-//     console.log($(event.target));
-// });
-function GetCartBtn(){
-    let pushAction=0; //דגל למניעת חזרה של איברים במערך ופעולה שאנחנו רוצים שתהיה פעם אחת
-    const cards=document.querySelectorAll('.Cards .Card');
-    cards.forEach((card)=> {
-        // console.log(card);
-        card.addEventListener('click',function()
-        {
-            if (pushAction == 0){ // בדיקה האם הדגל שלנו שווה לערך שהאתחלנו אותו בפעם הראשונה
-                proudactasOnCart.push(card);
-                pushAction = 1; // שנינו את הערך כדי לוודא שהפעולה לא תתבצע עוד פעם
-            }
-          console.log(proudactasOnCart);
-          return;
-        }
-        )
-    }
-    )
+
+
+function AddToCart(ID)
+{
+   let name = $('#item' + ID).children('.name').html()
+   let template = $('#Cart_Template').html()
+   template = template.replaceAll('{name}', name) 
+
+  $ ( "#cartBtn" ).append( template); 
 }
 
 
@@ -93,7 +83,7 @@ function GetCartBtn(){
     //load all items on initial load
     SearchItems()
     GetStores()
-    GetCartBtn()
+    
     //Search for new items everytime something is being pressed in the search bar
     $('#SearchBar').keyup(function(){ 
         SearchItems()
