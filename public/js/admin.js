@@ -45,7 +45,8 @@ function GetStores() {
     });
 }
 
-function edititem(ID) {
+function edititem(ID)
+ {
     let originalIMG = $('#item' + ID).children('.img').attr('src')
     let originalNAME = $('#item' + ID).children('.name').html()
     let originalPRICE = $('#item' + ID).children('.price').html()
@@ -70,7 +71,8 @@ function CancelShopEdit()
     GetStores()
 }
 
-function editshop(ID) {
+function editshop(ID)
+{
     let originalNAME = $('#shop' + ID).children('.name').html()
     let originalADDRESS = $('#shop' + ID).children('.address').html()
     $('#shop' + ID).html('')
