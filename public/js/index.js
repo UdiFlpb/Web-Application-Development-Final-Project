@@ -71,10 +71,12 @@ function GetStores()
 
 function AddToCart(ID)
 {
-    
-    let name = $('#item' + ID).children('.name').html()
-    
-    $ ( "#cartBtn" ).append( name); 
+
+   let name = $('#item' + ID).children('.name').html()
+   let template = $('#Cart_Template').html()
+   template = template.replaceAll('{name}', name) 
+
+  $ ( "#cartBtn" ).append( template); 
     
     
     
