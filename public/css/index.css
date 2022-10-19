@@ -116,9 +116,7 @@ body{
     height: 31px;
     width: 62px;  
 }
-
-/* logomarket on cart web */
-.me-2 {
-    margin-right: 55.5rem!important;
+.dropdown-menu[data-bs-popper]{
+    top: 50%;
 }
 
