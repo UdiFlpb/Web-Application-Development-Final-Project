@@ -67,32 +67,13 @@ function GetStores()
         }
     });
 }
-//arry of all the products
-proudactasOnCart=[]
 
-function GetCartBtn(){
-    let pushAction=0; //דגל למניעת חזרה של איברים במערך ופעולה שאנחנו רוצים שתהיה פעם אחת
-    const cards=document.querySelectorAll('.Cards .Card');
-    cards.forEach((card)=> {
-        // console.log(card);
-        card.addEventListener('click',function()
-        {
-            if (pushAction == 0){ // check if the flag value is the same as value in the initalization stage
-                proudactasOnCart.push(card);
-                pushAction = 1; // flag=1 to make sure that the action will not be executed again
-            }
-          console.log(proudactasOnCart);
-          return;
-        }
-        )
-    }
-    )
-}
 
 function AddToCart(ID)
 {
     let name = $('#item' + ID).children('.name').html()
     alert(name)
+    
     
 }
 

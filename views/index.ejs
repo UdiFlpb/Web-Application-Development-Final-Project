@@ -21,10 +21,16 @@
                             <p id="nameUserSize"><small> <%=username%> </small></p>
                         </li>
                         
-                        <a href="/getcart" controls preloed="auto">
-                            הסל שלי
-                            <img class=primary-icon src="images/shopping-cart.png"></a>
-                        </a>                    
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              הסל שלי
+                              <img class=primary-icon src="images/shopping-cart.png"></a>
+                            </a>
+                            <ul class="dropdown-menu" >
+                              
+                            </ul>
+                          </li>                   
+                        
 
                         <!-- shops list will be updated from the db on runtime -->
                         <li class="nav-item dropdown">
