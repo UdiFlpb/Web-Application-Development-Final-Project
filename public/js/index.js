@@ -72,8 +72,8 @@ function GetStores()
 function AddToCart(ID)
 {
     let name = $('#item' + ID).children('.name').html()
-    alert(name)
     
+    $ < ( "#cartBtn" ).append( name) >;
     
 }
 
